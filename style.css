@@ -1,0 +1,119 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    color: #fff;
+    background: #111;
+    font-family: 'Poppins',sans-serif;
+}
+
+h2 {
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 50%);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    inset: 0;
+    overflow-y: scroll;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+section > div {
+    padding: 100px 10px;
+}
+
+section div img {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px lightblue;
+}
+
+a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid white;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    gap: 20px;
+    align-items: center;
+    border-radius: 4px;
+    transition-duration: 200ms;
+}
+
+a:hover {
+    background: white;
+    color: #0f172a;
+}
+
+a i {
+    font-size: 1.3em;
+}
+
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #1d1d1d;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background:rgba(0, 191, 255, 0.2);
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+}
